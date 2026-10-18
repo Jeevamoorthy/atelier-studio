@@ -50,6 +50,7 @@
       <!-- Navigation Links -->
       <nav class="nav-menu" aria-label="Main Navigation">
         <a href="#services" class="nav-item">Services & Options</a>
+        <a href="#vision-terminal" class="nav-item">Vision & MCP Terminal</a>
         <a href="#project-estimator" class="nav-item">Scope & Pricing</a>
         <a href="#portfolio" class="nav-item">Selected Work</a>
         <a href="#process" class="nav-item">How It Works</a>
@@ -155,23 +156,311 @@
         <!-- Category Filter Tabs -->
         <div class="services-filter-bar">
           <div class="service-tabs" id="service-category-tabs">
-            <button class="service-tab active" data-cat="all">All Disciplines (6)</button>
+            <button class="service-tab active" data-cat="all">All Disciplines (11)</button>
+            <button class="service-tab" data-cat="computervision">Computer Vision & Industrial</button>
+            <button class="service-tab" data-cat="mcp">MCP & AI Agents</button>
             <button class="service-tab" data-cat="development">Full-Stack Web</button>
             <button class="service-tab" data-cat="design">Product & UI/UX</button>
-            <button class="service-tab" data-cat="ai">AI Automations</button>
             <button class="service-tab" data-cat="mobile">Mobile Apps</button>
-            <button class="service-tab" data-cat="branding">Brand & Identity</button>
-            <button class="service-tab" data-cat="audit">Code & Security Audits</button>
+            <button class="service-tab" data-cat="branding">Brand & Audits</button>
           </div>
 
           <div class="services-search">
-            <input type="text" id="service-search-input" placeholder="Filter by keyword (e.g. Next.js, Figma, Chatbot)..." aria-label="Search services">
+            <input type="text" id="service-search-input" placeholder="Filter by keyword (e.g. YOLO, Conveyor, Safety, MCP, Next.js)..." aria-label="Search services">
           </div>
         </div>
 
         <!-- Services Grid -->
         <div class="services-grid" id="services-grid-cards">
           <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Computer Vision & MCP Operations Terminal -->
+    <section class="vision-section" id="vision-terminal">
+      <div class="section-container">
+        <div class="section-title-wrap">
+          <div class="section-tag">COMPUTER VISION & MCP LAB</div>
+          <h2 class="section-title">Industrial Vision & MCP <span class="italic">Operations Terminal.</span></h2>
+          <p class="section-description">
+            Experience our production-grade computer vision pipelines and Model Context Protocol (MCP) agents in action. Test real-time PPE compliance, sub-25ms automated conveyor defect ejection, civil construction spatial site tracking, and interactive MCP tool execution.
+          </p>
+        </div>
+
+        <div class="vision-terminal-wrapper">
+          <!-- Terminal Header -->
+          <div class="vision-terminal-header">
+            <div class="terminal-title-group">
+              <span class="terminal-indicator-dot"></span>
+              <span class="terminal-title-text">ATELIER INDUSTRIAL VISION // RTSP EDGE NODE #04</span>
+              <span class="terminal-badge-edge">TENSORRT 14MS INFERENCE</span>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">
+              HOST: NVIDIA JETSON AGX ORIN • FASTPROTOCOL MCP v2025.11
+            </div>
+          </div>
+
+          <!-- Mode Navigation Tabs -->
+          <div class="vision-nav-tabs">
+            <button class="vision-tab-btn active" data-tab="safety">
+              <span>🦺 Industrial Safety & PPE Monitor</span>
+              <span class="tab-badge-hot">LIVE FEED</span>
+            </button>
+            <button class="vision-tab-btn" data-tab="conveyor">
+              <span>📦 Conveyor Defect Inspection (AOI)</span>
+              <span class="tab-badge-hot">&lt;25ms PLC</span>
+            </button>
+            <button class="vision-tab-btn" data-tab="civil">
+              <span>🏗️ Civil Construction Spatial Tracker</span>
+              <span class="tab-badge-hot">BIM 4D</span>
+            </button>
+            <button class="vision-tab-btn" data-tab="mcp">
+              <span>🤖 Industrial MCP Chatbot Agent</span>
+              <span class="tab-badge-hot">TOOL CALLING</span>
+            </button>
+          </div>
+
+          <!-- PANEL 1: Industrial Safety & PPE Compliance -->
+          <div class="vision-panel-content active" id="panel-safety">
+            <div class="vision-main-grid">
+              <div class="vision-stage-card">
+                <div class="vision-stage-header">
+                  <span class="cctv-label"><span class="cctv-rec-dot"></span> CAM-02 // ASSEMBLY FLOOR SOUTH</span>
+                  <span class="cctv-time">2026-10-18 05:45:12 UTC [CAM_LIVE]</span>
+                </div>
+                <div class="cctv-grid-overlay"></div>
+
+                <!-- Bounding Boxes Simulation -->
+                <div class="vision-bbox bbox-ok" id="bbox-worker-1" style="top: 28%; left: 18%; width: 120px; height: 180px;">
+                  <span class="bbox-tag">Worker #1: Hard Hat ✓ | Vest ✓ [99.2%]</span>
+                </div>
+
+                <div class="vision-bbox bbox-warn" id="bbox-worker-2" style="top: 42%; left: 58%; width: 110px; height: 170px;">
+                  <span class="bbox-tag">Worker #2: Hard Hat ✓ | No Vest ⚠️ [94.1%]</span>
+                </div>
+
+                <div class="vision-bbox bbox-ok" id="bbox-forklift" style="bottom: 12%; right: 10%; width: 160px; height: 100px;">
+                  <span class="bbox-tag">Forklift FL-04: Proximity Safe (8.4m)</span>
+                </div>
+
+                <!-- Stage Footer -->
+                <div style="z-index: 10; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: #94a3b8; background: rgba(0,0,0,0.6); padding: 8px 12px; border-radius: 4px;">
+                  <span>FEED: 1080p @ 30 FPS H.265</span>
+                  <span>DETECTION: YOLOv10-X (HardHat, Vest, Goggles, Geofence)</span>
+                </div>
+              </div>
+
+              <!-- Telemetry & Controls -->
+              <div class="vision-telemetry-col">
+                <div class="telemetry-metrics-grid">
+                  <div class="telemetry-stat-card">
+                    <span class="stat-label">PPE Compliance</span>
+                    <span class="stat-value emerald" id="stat-ppe-compliance">96.8%</span>
+                  </div>
+                  <div class="telemetry-stat-card">
+                    <span class="stat-label">Active Ingestion</span>
+                    <span class="stat-value blue">4 Streams</span>
+                  </div>
+                  <div class="telemetry-stat-card">
+                    <span class="stat-label">Inference Latency</span>
+                    <span class="stat-value blue">14.2 ms</span>
+                  </div>
+                  <div class="telemetry-stat-card">
+                    <span class="stat-label">Hazard Breaches</span>
+                    <span class="stat-value emerald" id="stat-hazard-alerts">0 Active</span>
+                  </div>
+                </div>
+
+                <div class="vision-controls-box">
+                  <h4 class="controls-heading">Interactive Model Simulation</h4>
+                  <div class="controls-button-group">
+                    <button class="btn-vision-action" id="btn-toggle-boxes">
+                      <span>Toggle AI Detection Bounding Boxes</span>
+                      <span class="action-kbd">VIEW</span>
+                    </button>
+                    <button class="btn-vision-action" id="btn-trigger-breach">
+                      <span>Simulate Restricted Zone Perimeter Breach</span>
+                      <span class="action-kbd">ALERT</span>
+                    </button>
+                    <button class="btn-vision-action" id="btn-reset-safety">
+                      <span>Reset Safety Perimeter State</span>
+                      <span class="action-kbd">RESET</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL 2: Conveyor Belt Defect Inspection -->
+          <div class="vision-panel-content" id="panel-conveyor">
+            <div class="vision-main-grid">
+              <div class="vision-stage-card">
+                <div class="vision-stage-header">
+                  <span class="cctv-label"><span class="cctv-rec-dot"></span> AOI LINE-B // HIGH-SPEED CONVEYOR</span>
+                  <span class="cctv-time">BASLER GIGE VISION [ACTIVE]</span>
+                </div>
+
+                <!-- Conveyor Animation Stage -->
+                <div class="conveyor-animation-box">
+                  <div class="conveyor-sensor-beam"></div>
+                  <div class="conveyor-belt-track"></div>
+                  <div class="conveyor-part" id="sim-conveyor-part" style="left: 45%;">
+                    PASS
+                  </div>
+                </div>
+
+                <div style="z-index: 10; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: #94a3b8; background: rgba(0,0,0,0.6); padding: 8px 12px; border-radius: 4px;">
+                  <span>OPTICAL SENSOR: Darkfield Coaxial Strobe</span>
+                  <span>PLC INTERFACE: Modbus TCP to Siemens S7-1500 (Sub-20ms)</span>
+                </div>
+              </div>
+
+              <!-- Conveyor Telemetry & Controls -->
+              <div class="vision-telemetry-col">
+                <div class="telemetry-metrics-grid">
+                  <div class="telemetry-stat-card">
+                    <span class="stat-label">Inspected Today</span>
+                    <span class="stat-value blue" id="stat-parts-inspected">1,420 units</span>
+                  </div>
+                  <div class="telemetry-stat-card">
+                    <span class="stat-label">Defect Rate</span>
+                    <span class="stat-value emerald" id="stat-defect-rate">0.38%</span>
+                  </div>
+                  <div class="telemetry-stat-card">
+                    <span class="stat-label">Sensor Latency</span>
+                    <span class="stat-value emerald" id="stat-conveyor-latency">16.8 ms</span>
+                  </div>
+                  <div class="telemetry-stat-card">
+                    <span class="stat-label">Ejector Status</span>
+                    <span class="stat-value emerald">ARMED ✓</span>
+                  </div>
+                </div>
+
+                <div class="vision-controls-box">
+                  <h4 class="controls-heading">Conveyor QC Controls</h4>
+                  <div class="controls-button-group">
+                    <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 6px;">
+                      <label style="font-size: 0.76rem; color: var(--text-secondary); flex: 1;">Line Speed:</label>
+                      <select id="conveyor-speed-select" style="padding: 6px; border: 1px solid var(--border-subtle); border-radius: 4px; font-family: var(--font-mono); font-size: 0.75rem;">
+                        <option value="60">60 PPM (Standard)</option>
+                        <option value="120" selected>120 PPM (Production)</option>
+                        <option value="300">300 PPM (High-Speed)</option>
+                      </select>
+                    </div>
+                    <button class="btn-vision-action" id="btn-inject-defect">
+                      <span>Inject Test Surface Crack Defect</span>
+                      <span class="action-kbd">EJECT</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL 3: Civil Construction Spatial Tracker -->
+          <div class="vision-panel-content" id="panel-civil">
+            <div class="vision-main-grid">
+              <div class="vision-stage-card">
+                <div class="vision-stage-header">
+                  <span class="cctv-label"><span class="cctv-rec-dot"></span> DRONE ORTHO-AERIAL // SECTOR 04 CIVIL</span>
+                  <span class="cctv-time">SPATIAL SAM-2 MESH [ACTIVE]</span>
+                </div>
+
+                <div class="cctv-grid-overlay" id="civil-ortho-grid"></div>
+
+                <!-- Civil Zones -->
+                <div class="vision-bbox bbox-ok" style="top: 20%; left: 15%; width: 220px; height: 160px;">
+                  <span class="bbox-tag">Trench Sector 4: 82.4% Excavated (4,820 m³)</span>
+                </div>
+
+                <div class="vision-bbox bbox-ok" style="top: 30%; right: 15%; width: 140px; height: 90px;">
+                  <span class="bbox-tag">Excavator EX-320: ACTIVE (92% Load)</span>
+                </div>
+
+                <div class="vision-bbox bbox-ok" style="bottom: 15%; left: 35%; width: 130px; height: 80px;">
+                  <span class="bbox-tag">OSHA Muster Zone: Safe (38 Present)</span>
+                </div>
+
+                <div style="z-index: 10; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.7rem; color: #94a3b8; background: rgba(0,0,0,0.6); padding: 8px 12px; border-radius: 4px;">
+                  <span>SURVEY: DJI Matrice 350 RTK Photogrammetry</span>
+                  <span>SYNC: Autodesk Construction Cloud (BIM 4D Schedule)</span>
+                </div>
+              </div>
+
+              <!-- Civil Telemetry & Controls -->
+              <div class="vision-telemetry-col">
+                <div class="telemetry-metrics-grid">
+                  <div class="telemetry-stat-card">
+                    <span class="stat-label">Cut/Fill Progress</span>
+                    <span class="stat-value emerald">82.4% Done</span>
+                  </div>
+                  <div class="telemetry-stat-card">
+                    <span class="stat-label">Schedule Variance</span>
+                    <span class="stat-value emerald">+1.2 Days Ahead</span>
+                  </div>
+                  <div class="telemetry-stat-card">
+                    <span class="stat-label">Machinery Utilization</span>
+                    <span class="stat-value blue">89.4% Active</span>
+                  </div>
+                  <div class="telemetry-stat-card">
+                    <span class="stat-label">Worker Muster</span>
+                    <span class="stat-value emerald" id="stat-muster-count">38 / 38 Present</span>
+                  </div>
+                </div>
+
+                <div class="vision-controls-box">
+                  <h4 class="controls-heading">Civil Spatial Analytics</h4>
+                  <div class="controls-button-group">
+                    <button class="btn-vision-action" id="btn-toggle-civil-grid">
+                      <span>Toggle Drone 3D Volumetric Mesh</span>
+                      <span class="action-kbd">MESH</span>
+                    </button>
+                    <button class="btn-vision-action" id="btn-trigger-muster">
+                      <span>Run Daily Worker Muster Headcount Verification</span>
+                      <span class="action-kbd">OSHA</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL 4: Industrial MCP Chatbot -->
+          <div class="vision-panel-content" id="panel-mcp">
+            <div class="mcp-terminal-container">
+              <div class="mcp-terminal-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="terminal-indicator-dot"></span>
+                  <span>ATELIER MCP INDUSTRIAL AGENT // CLAUDE 3.7 + FASTMCP</span>
+                </div>
+                <span class="mcp-protocol-tag">MCP PROTOCOL v2025.11</span>
+              </div>
+
+              <div class="mcp-messages-scroll" id="mcp-chat-scroll">
+                <div class="mcp-msg bot">
+                  <div style="margin-bottom: 6px;"><strong>Atelier Industrial MCP Agent Connected.</strong></div>
+                  <div>I interface directly with factory CCTV computer vision streams, conveyor Modbus telemetry, and civil site drone analytics via the official Anthropic Model Context Protocol (MCP).</div>
+                  <div style="margin-top: 8px; font-size: 0.76rem; color: var(--text-muted);">
+                    Try asking a query or clicking one of the quick prompt chips below.
+                  </div>
+                </div>
+              </div>
+
+              <div class="mcp-chips-row">
+                <button class="mcp-chip" data-prompt="Check Sector 2 safety and PPE compliance">⚡ Sector 2 PPE Compliance</button>
+                <button class="mcp-chip" data-prompt="Check Conveyor Line B defect rate for last hour">⚡ Conveyor Defect Rate (60m)</button>
+                <button class="mcp-chip" data-prompt="Give me civil construction excavation progress report">⚡ Civil Excavation Report</button>
+                <button class="mcp-chip" data-prompt="List connected MCP tools and camera streams">⚡ List Active MCP Tools</button>
+              </div>
+
+              <div class="mcp-input-bar">
+                <input type="text" id="mcp-chat-input" placeholder="Query factory camera feeds, conveyor defect logs, or civil progress via MCP..." aria-label="MCP Query Input">
+                <button class="btn-mcp-send" id="btn-mcp-send-chat">Query MCP Agent</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -240,6 +529,51 @@
                       <strong>Brand & Visual Identity</strong>
                       <span class="subtext">Logomark, typography rules, brand guidelines</span>
                       <span class="price-hint">From $1,800</span>
+                    </div>
+                  </label>
+
+                  <label class="cfg-radio-card">
+                    <input type="radio" name="cfg_service" value="cv_safety" data-base="3800" data-name="Industrial Safety & PPE Compliance Vision">
+                    <div class="cfg-card-body">
+                      <strong>Industrial Safety & PPE</strong>
+                      <span class="subtext">Hard hat, vest, geofencing, forklift distance</span>
+                      <span class="price-hint">From $3,800</span>
+                    </div>
+                  </label>
+
+                  <label class="cfg-radio-card">
+                    <input type="radio" name="cfg_service" value="conveyor_qc" data-base="4200" data-name="Conveyor Belt & Defect Inspection Software (AOI)">
+                    <div class="cfg-card-body">
+                      <strong>Conveyor Defect Inspection</strong>
+                      <span class="subtext">Sub-25ms surface crack, pneumatic reject, PLC</span>
+                      <span class="price-hint">From $4,200</span>
+                    </div>
+                  </label>
+
+                  <label class="cfg-radio-card">
+                    <input type="radio" name="cfg_service" value="civil_construction" data-base="4500" data-name="Civil Construction Site Spatial & Safety Management">
+                    <div class="cfg-card-body">
+                      <strong>Civil Construction Spatial</strong>
+                      <span class="subtext">Drone orthomosaic, 3D excavation, muster, BIM 4D</span>
+                      <span class="price-hint">From $4,500</span>
+                    </div>
+                  </label>
+
+                  <label class="cfg-radio-card">
+                    <input type="radio" name="cfg_service" value="work_efficiency" data-base="3500" data-name="Work Efficiency & Ergonomics Motion Tracking">
+                    <div class="cfg-card-body">
+                      <strong>Work Efficiency & Motion</strong>
+                      <span class="subtext">Cycle times, station bottlenecks, REBA ergonomics</span>
+                      <span class="price-hint">From $3,500</span>
+                    </div>
+                  </label>
+
+                  <label class="cfg-radio-card">
+                    <input type="radio" name="cfg_service" value="mcp_industrial_bot" data-base="3400" data-name="Industrial MCP Chatbot & Operations Assistant">
+                    <div class="cfg-card-body">
+                      <strong>Industrial MCP Agent</strong>
+                      <span class="subtext">Model Context Protocol, SCADA & camera tool calling</span>
+                      <span class="price-hint">From $3,400</span>
                     </div>
                   </label>
 
@@ -375,6 +709,50 @@
                         <span class="addon-price">+$350</span>
                       </div>
                       <p>Modular component library ready for design scale with color tokens and variables.</p>
+                    </div>
+                  </label>
+
+                  <label class="addon-item">
+                    <input type="checkbox" name="cfg_addon" value="jetson_edge" data-price="850">
+                    <div class="addon-text">
+                      <div class="addon-head">
+                        <strong>NVIDIA Jetson / TensorRT Edge Inference Optimization</strong>
+                        <span class="addon-price">+$850</span>
+                      </div>
+                      <p>Sub-20ms model quantization (INT8/FP16), zero-copy DeepStream memory pipeline, and edge Docker container.</p>
+                    </div>
+                  </label>
+
+                  <label class="addon-item">
+                    <input type="checkbox" name="cfg_addon" value="mcp_connector" data-price="700">
+                    <div class="addon-text">
+                      <div class="addon-head">
+                        <strong>Model Context Protocol (MCP) Industrial Server Connector</strong>
+                        <span class="addon-price">+$700</span>
+                      </div>
+                      <p>FastMCP server connecting conversational LLMs to live SCADA, PLC telemetry, and CCTV camera tools.</p>
+                    </div>
+                  </label>
+
+                  <label class="addon-item">
+                    <input type="checkbox" name="cfg_addon" value="pneumatic_plc" data-price="550">
+                    <div class="addon-text">
+                      <div class="addon-head">
+                        <strong>High-Speed Pneumatic Ejector & PLC Rejection Controller</strong>
+                        <span class="addon-price">+$550</span>
+                      </div>
+                      <p>Direct Modbus TCP / Siemens S7-1500 PLC hardware wiring logic for sub-25ms pneumatic defect sorting.</p>
+                    </div>
+                  </label>
+
+                  <label class="addon-item">
+                    <input type="checkbox" name="cfg_addon" value="drone_mesh" data-price="650">
+                    <div class="addon-text">
+                      <div class="addon-head">
+                        <strong>Drone Orthomosaic & 3D Volumetric Earthwork Engine</strong>
+                        <span class="addon-price">+$650</span>
+                      </div>
+                      <p>Automated drone photogrammetry processor with cut/fill volume calculations and Autodesk BIM 4D sync.</p>
                     </div>
                   </label>
                 </div>

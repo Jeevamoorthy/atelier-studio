@@ -127,6 +127,106 @@ const STUDIO_SERVICES = [
       { name: "Full Scale", price: 2560, days: 7, desc: "Line-by-line architecture review, database query profiling, and 3 PRs fixing key bottlenecks." },
       { name: "Enterprise", price: 3840, days: 12, desc: "Full penetration test, SOC2 readiness assessment, load testing at 10,000 req/sec, and remediation sprints." }
     ]
+  },
+  {
+    id: "cv_safety",
+    category: "computervision",
+    name: "Industrial Safety & PPE Compliance Vision",
+    summary: "Real-time edge computer vision for factories and warehouses: automated hard hat, high-vis vest, goggles detection, danger zone intrusion alerts, and forklift-pedestrian proximity warnings.",
+    basePrice: 3800,
+    turnaround: "10–18 business days",
+    techStack: ["YOLOv10 / YOLO11", "NVIDIA DeepStream", "TensorRT Engine", "RTSP / ONVIF Multi-Stream", "PyTorch", "FastAPI Edge"],
+    deliverables: "Dockerized edge inference container, multi-camera RTSP ingestion pipeline, OSHA compliance logging dashboard, and automated Telegram/SMS safety siren triggers.",
+    options: {
+      safetyModules: ["Hard Hat & Helmet Detection", "High-Vis Vest & Harness", "Hazard Zone Intrusion Geofence", "Forklift & Pedestrian Distance", "Smoke & Flame Early Warning", "Slip / Fall Detection"],
+      deploymentHardware: ["NVIDIA Jetson AGX / Orin Edge", "On-Premises GPU Server (RTX 4090)", "Cloud AWS EC2 / G5 Cluster", "Hybrid Edge-Cloud Sync"],
+      alertIntegrations: ["PLC Hardware Relay / Strobe Siren", "Telegram & WhatsApp Emergency Bot", "Slack Incident Channel", "REST Webhooks & Kafka Stream"]
+    },
+    tiers: [
+      { name: "MVP Sprint", price: 3800, days: 10, desc: "Single RTSP stream, hard hat + high-vis vest PPE detection, and live browser alert dashboard." },
+      { name: "Full Scale", price: 5900, days: 18, desc: "Up to 8 concurrent CCTV camera feeds, geofenced hazard zones, forklift proximity alerts, and automated OSHA incident logs." },
+      { name: "Enterprise", price: 8800, days: 28, desc: "Multi-facility CCTV cluster (32+ feeds), NVIDIA DeepStream zero-copy GPU pipeline, PLC strobe light relay triggers, and 24/7 edge uptime watchdog." }
+    ]
+  },
+  {
+    id: "conveyor_qc",
+    category: "computervision",
+    name: "Conveyor Belt & Defect Inspection Software (AOI)",
+    summary: "Sub-25ms automated optical inspection (AOI) software for high-speed manufacturing lines. Real-time flaw detection, surface crack classification, and pneumatic reject triggers.",
+    basePrice: 4200,
+    turnaround: "12–20 business days",
+    techStack: ["OpenCV / Halcon C++", "TensorRT Engine", "Basler / FLIR GigE Vision SDK", "Modbus TCP / OPC-UA", "Pneumatic Ejector IO"],
+    deliverables: "Sub-25ms vision inspection software, industrial camera calibration routines, PLC I/O pneumatic rejection logic, and quality telemetry dashboard.",
+    options: {
+      inspectionTypes: ["Surface Scratches & Micro-Cracks", "Dimensional Tolerancing & Misalignment", "Packaging Seal & Blister Integrity", "Color Consistency & Foreign Inclusions", "High-Speed Barcode / 2D Matrix OCR"],
+      lineSpeed: ["Standard Conveyor (up to 120 ppm)", "High-Speed Packaging (300+ ppm)", "Continuous Web / Roll Surface (60 m/min)"],
+      hardwareInterfacing: ["Industrial GigE / USB3 Vision Cameras", "Pneumatic Air Blow Rejector", "Modbus TCP / Siemens S7 PLC", "Darkfield / Coaxial Strobe Lighting"]
+    },
+    tiers: [
+      { name: "MVP Sprint", price: 4200, days: 12, desc: "Single camera line inspection, binary pass/fail defect classification, and live PPM (parts-per-minute) telemetry." },
+      { name: "Full Scale", price: 6500, days: 20, desc: "Multi-angle camera inspection, 5 defect classifications, pneumatic reject valve signal triggering, and Pareto defect analytics." },
+      { name: "Enterprise", price: 9800, days: 30, desc: "Dual-line 500+ ppm inspection system with sub-15ms TensorRT inference, automated darkfield strobe synchronization, and direct Siemens/Allen-Bradley PLC integration." }
+    ]
+  },
+  {
+    id: "civil_construction",
+    category: "computervision",
+    name: "Civil Construction Site Spatial & Safety Management",
+    summary: "Drone photogrammetry & fixed site CCTV computer vision for civil engineering: earthmoving excavation tracking, heavy machinery utilization, perimeter geofencing, and worker muster headcount.",
+    basePrice: 4500,
+    turnaround: "12–22 business days",
+    techStack: ["Drone Orthomosaic Processing", "Segment Anything 2 (SAM-2)", "Spatial Volumetric 3D", "Geofence Spatial Meshes", "Autodesk BIM 4D Sync"],
+    deliverables: "Automated drone flight orthomosaic processor, 3D volumetric cut/fill earthwork calculator, site camera muster headcount, and BIM 4D schedule variance reports.",
+    options: {
+      siteAnalytics: ["Excavation Volumetric Cut/Fill Tracking", "Heavy Machinery Utilization (Cranes/Dozers)", "Trench & Edge Fall Protection Audits", "Daily Site Muster & Worker Headcount", "Stockpile Material Volume Estimation"],
+      dataSources: ["DJI / Skydio Drone Aerial Images", "Fixed Pan-Tilt-Zoom (PTZ) 4K CCTVs", "Time-Lapse Site Cameras", "GeoTIFF & Point Cloud LAS Files"],
+      enterpriseIntegrations: ["Autodesk Construction Cloud (BIM 360)", "Procore Project Management", "Bentley SYNCHRO 4D", "Weekly Executive PDF Reports"]
+    },
+    tiers: [
+      { name: "MVP Sprint", price: 4500, days: 12, desc: "Drone orthomosaic 2D site mapping, excavation boundary polygon tracking, and daily worker muster headcount." },
+      { name: "Full Scale", price: 6900, days: 22, desc: "3D volumetric cut/fill estimation, heavy machinery idle vs. active runtime tracking, and automated perimeter danger zone breaches." },
+      { name: "Enterprise", price: 10400, days: 32, desc: "Multi-site enterprise pipeline with automated drone flight ingestion, live 4D BIM model overlay comparison, and autonomous OSHA compliance dispatch." }
+    ]
+  },
+  {
+    id: "work_efficiency",
+    category: "computervision",
+    name: "Work Efficiency & Ergonomics Motion Tracking",
+    summary: "Vision-based worker cycle-time measurement, assembly line bottleneck detection, worker ergonomic posture scoring (REBA/RULA), and workstation utilization heatmaps.",
+    basePrice: 3500,
+    turnaround: "8–16 business days",
+    techStack: ["MediaPipe 3D Pose", "Optical Flow Vector Fields", "Spatial Heatmap Generators", "Cycle-Time State Machine", "Grafana Industrial Panels"],
+    deliverables: "Privacy-preserving video analyzer (face/body anonymization), cycle-time takt distribution engine, ergonomic risk scoring engine, and executive productivity dashboard.",
+    options: {
+      motionMetrics: ["Assembly Cycle Time & Takt Variance", "Station Idle vs. Active Motion Ratio", "Worker Ergonomic Risk (REBA / RULA)", "Line Bottleneck & Micro-Stoppage Detection", "Station Spatial Heatmaps"],
+      privacyCompliance: ["Real-Time Face Blurring / Pixelation", "Silhouette / Skeleton Anonymization", "Edge-Only Processing (No Raw Video Stored)"],
+      reportingDashboards: ["Live Line-Side Grafana Dashboard", "Shift Productivity Comparison Reports", "Industrial CSV / Parquet Data Lake Export"]
+    },
+    tiers: [
+      { name: "MVP Sprint", price: 3500, days: 8, desc: "Single workstation cycle time tracker, active vs. idle time ratio, and station heatmap generator." },
+      { name: "Full Scale", price: 5400, days: 16, desc: "5-station assembly line tracking, REBA ergonomic strain risk assessment, and takt time bottleneck alerts." },
+      { name: "Enterprise", price: 8200, days: 24, desc: "Plant-wide 20+ workstation motion analytics suite with edge privacy anonymization, ERP labor standard integration, and automated shift efficiency reports." }
+    ]
+  },
+  {
+    id: "mcp_industrial_bot",
+    category: "mcp",
+    name: "Industrial MCP Chatbot & Operations Assistant",
+    summary: "Enterprise AI assistant built with Model Context Protocol (MCP). Directly queries CCTV video analytics, conveyor defect logs, SCADA/PLC telemetry, and civil site reports via conversational natural language.",
+    basePrice: 3400,
+    turnaround: "8–15 business days",
+    techStack: ["Model Context Protocol (MCP)", "Anthropic Claude 3.7", "FastMCP Python Server", "Industrial OPC-UA / MQTT", "TimescaleDB Timeseries"],
+    deliverables: "Production FastMCP server, enterprise conversational web chat widget, tool-calling integration for SCADA/CCTV/Safety DB, and role-based operator permissions.",
+    options: {
+      mcpTools: ["mcp::query_cctv_safety_feed()", "mcp::get_conveyor_defect_logs()", "mcp::inspect_civil_site_progress()", "mcp::trigger_emergency_strobe()", "mcp::generate_osha_audit_report()"],
+      chatInterfaces: ["Embedded High-Contrast Operator Web Console", "Industrial Rugged Tablet PWA", "Slack / Microsoft Teams Channel", "Factory Floor Audio Voice Agent"],
+      securityMode: ["Air-Gapped Local LLM (Ollama / vLLM)", "Enterprise Zero-Data-Retention Claude API", "Granular Operator RBAC Permissions"]
+    },
+    tiers: [
+      { name: "MVP Sprint", price: 3400, days: 8, desc: "Custom MCP server with 4 industrial telemetry tools, conversational chat interface, and live system status queries." },
+      { name: "Full Scale", price: 5200, days: 15, desc: "Bidirectional MCP agent with 10 tools, automated incident escalation, conveyor defect anomaly alerts, and Slack/Teams integration." },
+      { name: "Enterprise", price: 7900, days: 24, desc: "Air-gapped on-premise MCP cluster, multi-agent orchestrator connecting ERP, SCADA, CCTV, and maintenance work-order dispatch." }
+    ]
   }
 ];
 
@@ -155,6 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initEstimator();
   initCategoryFilters();
   initFaq();
+  initVisionTerminal();
   fetchActiveProjects();
 });
 
@@ -828,20 +929,289 @@ function initFaq() {
 // 10. TOAST NOTIFICATIONS
 // ==========================================
 
-function showToast(message, type = "info") {
-  const container = document.getElementById("toast-container");
-  if (!container) return;
+// ==========================================
+// 11. INDUSTRIAL COMPUTER VISION & MCP TERMINAL
+// ==========================================
 
-  const toast = document.createElement("div");
-  toast.className = `toast-msg ${type}`;
-  toast.textContent = message;
+function initVisionTerminal() {
+  // Tab Switching
+  const tabs = document.querySelectorAll(".vision-tab-btn");
+  const panels = document.querySelectorAll(".vision-panel-content");
 
-  container.appendChild(toast);
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      tabs.forEach(t => t.classList.remove("active"));
+      panels.forEach(p => p.classList.remove("active"));
 
-  setTimeout(() => {
-    toast.style.opacity = "0";
-    toast.style.transform = "translateX(20px)";
-    toast.style.transition = "all 0.2s ease";
-    setTimeout(() => toast.remove(), 250);
-  }, 3500);
+      tab.classList.add("active");
+      const targetPanel = document.getElementById(`panel-${tab.dataset.tab}`);
+      if (targetPanel) targetPanel.classList.add("active");
+    });
+  });
+
+  // Clock Update for CCTV
+  setInterval(() => {
+    const timeEl = document.querySelectorAll(".cctv-time");
+    const now = new Date();
+    const str = now.toISOString().replace("T", " ").substring(0, 19) + " UTC [CAM_LIVE]";
+    timeEl.forEach(el => { el.textContent = str; });
+  }, 1000);
+
+  // Safety Controls
+  initSafetyControls();
+
+  // Conveyor Controls
+  initConveyorControls();
+
+  // Civil Construction Controls
+  initCivilControls();
+
+  // MCP Chatbot
+  initMcpChatbot();
 }
+
+// 1. Safety Simulator
+function initSafetyControls() {
+  const toggleBoxesBtn = document.getElementById("btn-toggle-boxes");
+  const triggerBreachBtn = document.getElementById("btn-trigger-breach");
+  const resetSafetyBtn = document.getElementById("btn-reset-safety");
+  const worker2Box = document.getElementById("bbox-worker-2");
+  const hazardAlertStat = document.getElementById("stat-hazard-alerts");
+  const ppeScoreStat = document.getElementById("stat-ppe-compliance");
+
+  let boxesVisible = true;
+
+  if (toggleBoxesBtn) {
+    toggleBoxesBtn.addEventListener("click", () => {
+      boxesVisible = !boxesVisible;
+      document.querySelectorAll(".vision-bbox").forEach(b => {
+        b.style.display = boxesVisible ? "block" : "none";
+      });
+      showToast(boxesVisible ? "YOLOv10 Bounding Boxes Visible" : "Raw RTSP Camera Stream Only", "info");
+    });
+  }
+
+  if (triggerBreachBtn && worker2Box) {
+    triggerBreachBtn.addEventListener("click", () => {
+      worker2Box.className = "vision-bbox bbox-danger";
+      const tag = worker2Box.querySelector(".bbox-tag");
+      if (tag) tag.textContent = "RESTRICTED PERIMETER BREACH [ALERT] 98.4%";
+      worker2Box.style.left = "48%";
+      worker2Box.style.top = "52%";
+
+      if (hazardAlertStat) {
+        hazardAlertStat.textContent = "1 ACTIVE";
+        hazardAlertStat.className = "stat-value amber";
+      }
+      if (ppeScoreStat) ppeScoreStat.textContent = "91.2%";
+
+      showToast("⚠️ HAZARD BREACH: Worker entered active gantry crane sweep zone!", "warning");
+    });
+  }
+
+  if (resetSafetyBtn && worker2Box) {
+    resetSafetyBtn.addEventListener("click", () => {
+      worker2Box.className = "vision-bbox bbox-warn";
+      const tag = worker2Box.querySelector(".bbox-tag");
+      if (tag) tag.textContent = "Worker #2: Hard Hat ✓ | No Vest ⚠️";
+      worker2Box.style.left = "58%";
+      worker2Box.style.top = "42%";
+
+      if (hazardAlertStat) {
+        hazardAlertStat.textContent = "0 Active";
+        hazardAlertStat.className = "stat-value emerald";
+      }
+      if (ppeScoreStat) ppeScoreStat.textContent = "96.8%";
+
+      showToast("Safety perimeter normal. 0 active intrusions.", "success");
+    });
+  }
+}
+
+// 2. Conveyor Simulator
+function initConveyorControls() {
+  const injectDefectBtn = document.getElementById("btn-inject-defect");
+  const ppmSelector = document.getElementById("conveyor-speed-select");
+  const partEl = document.getElementById("sim-conveyor-part");
+  const defectRateStat = document.getElementById("stat-defect-rate");
+  const latencyStat = document.getElementById("stat-conveyor-latency");
+  const inspectedStat = document.getElementById("stat-parts-inspected");
+
+  let count = 1420;
+
+  if (injectDefectBtn && partEl) {
+    injectDefectBtn.addEventListener("click", () => {
+      partEl.className = "conveyor-part defect";
+      partEl.textContent = "CRACK";
+
+      if (latencyStat) latencyStat.textContent = "16.8ms";
+      if (defectRateStat) defectRateStat.textContent = "0.42%";
+
+      setTimeout(() => {
+        partEl.classList.add("rejected");
+        showToast("⚡ Sub-20ms Pneumatic Ejector Activated: Defect Discarded!", "warning");
+
+        setTimeout(() => {
+          partEl.className = "conveyor-part";
+          partEl.textContent = "PASS";
+          partEl.style.transform = "none";
+          partEl.style.opacity = "1";
+          count++;
+          if (inspectedStat) inspectedStat.textContent = `${count.toLocaleString()} units`;
+        }, 1200);
+      }, 500);
+    });
+  }
+
+  if (ppmSelector) {
+    ppmSelector.addEventListener("change", (e) => {
+      showToast(`Conveyor speed recalibrated to ${e.target.value} PPM with Basler GigE Vision sync.`, "info");
+    });
+  }
+}
+
+// 3. Civil Construction Simulator
+function initCivilControls() {
+  const toggleGridBtn = document.getElementById("btn-toggle-civil-grid");
+  const musterBtn = document.getElementById("btn-trigger-muster");
+  const gridOverlay = document.getElementById("civil-ortho-grid");
+  const musterStat = document.getElementById("stat-muster-count");
+
+  let gridActive = true;
+
+  if (toggleGridBtn && gridOverlay) {
+    toggleGridBtn.addEventListener("click", () => {
+      gridActive = !gridActive;
+      gridOverlay.style.opacity = gridActive ? "1" : "0.15";
+      showToast(gridActive ? "Drone 3D Volumetric Mesh & Point Cloud Overlay ON" : "Orthomosaic Aerial View Clean", "info");
+    });
+  }
+
+  if (musterBtn && musterStat) {
+    musterBtn.addEventListener("click", () => {
+      musterStat.textContent = "38 / 38 VERIFIED";
+      musterStat.className = "stat-value emerald";
+      showToast("Drone & CCTV Muster Scan: All 38 site personnel verified in safe zones.", "success");
+    });
+  }
+}
+
+// 4. MCP Industrial Chatbot
+function initMcpChatbot() {
+  const scrollArea = document.getElementById("mcp-chat-scroll");
+  const inputEl = document.getElementById("mcp-chat-input");
+  const sendBtn = document.getElementById("btn-mcp-send-chat");
+  const chips = document.querySelectorAll(".mcp-chip");
+
+  if (!scrollArea || !inputEl || !sendBtn) return;
+
+  function appendUserMessage(text) {
+    const msg = document.createElement("div");
+    msg.className = "mcp-msg user";
+    msg.textContent = text;
+    scrollArea.appendChild(msg);
+    scrollArea.scrollTop = scrollArea.scrollHeight;
+  }
+
+  function appendBotResponse(toolName, toolArgs, responseHtml) {
+    const msg = document.createElement("div");
+    msg.className = "mcp-msg bot";
+
+    let toolMarkup = "";
+    if (toolName) {
+      toolMarkup = `
+        <div class="mcp-tool-call">
+          <div><span style="color: #64748b;">EXEC:</span> <span class="tool-name">${toolName}</span>(${toolArgs})</div>
+          <span class="tool-status">✓ Status: 200 OK • Response Latency: 42ms • Context Verified</span>
+        </div>
+      `;
+    }
+
+    msg.innerHTML = `
+      ${toolMarkup}
+      <div>${responseHtml}</div>
+    `;
+
+    scrollArea.appendChild(msg);
+    scrollArea.scrollTop = scrollArea.scrollHeight;
+  }
+
+  function handleQuery(query) {
+    const q = query.trim();
+    if (!q) return;
+
+    appendUserMessage(q);
+    inputEl.value = "";
+
+    const lower = q.toLowerCase();
+
+    setTimeout(() => {
+      if (lower.includes("safety") || lower.includes("ppe") || lower.includes("sector")) {
+        appendBotResponse(
+          "mcp::get_safety_compliance_feed",
+          '{ sector: "Floor 2 - Assembly", cameraIds: ["CAM_01", "CAM_02"] }',
+          `<strong>Safety Audit Report // Sector 2:</strong><br>
+          • <strong>Overall PPE Compliance:</strong> 96.8% (Target: >95%)<br>
+          • <strong>Hard Hat Detection:</strong> 100% (24/24 workers)<br>
+          • <strong>High-Vis Vest Compliance:</strong> 95.8% (1 worker flagged on Station 4)<br>
+          • <strong>Restricted Perimeter:</strong> 0 active intrusions in robotic weld zone.<br>
+          <em>Status: OSHA Compliant. Automated shift log recorded to Postgres TimescaleDB.</em>`
+        );
+      } else if (lower.includes("conveyor") || lower.includes("defect") || lower.includes("qc")) {
+        appendBotResponse(
+          "mcp::get_conveyor_telemetry",
+          '{ lineId: "LINE_B_PACKAGING", timeRangeMinutes: 60 }',
+          `<strong>Conveyor Line B Quality Telemetry (Last 60m):</strong><br>
+          • <strong>Total Parts Inspected:</strong> 1,420 units<br>
+          • <strong>Pass Rate:</strong> 99.58% (1,414 units approved)<br>
+          • <strong>Defects Ejected:</strong> 6 units (4 surface scratches, 2 seal misalignments)<br>
+          • <strong>Pneumatic Ejection Latency:</strong> 18.2ms avg.<br>
+          <em>PLC Connection: Modbus TCP to Siemens S7-1500 operational.</em>`
+        );
+      } else if (lower.includes("civil") || lower.includes("construction") || lower.includes("excavation")) {
+        appendBotResponse(
+          "mcp::query_construction_progress",
+          '{ projectCode: "SITE_CIVIL_04", targetZone: "Foundation Trench" }',
+          `<strong>Civil Site Spatial & Progress Status // Sector 4:</strong><br>
+          • <strong>Volumetric Excavation:</strong> 4,820 m³ / 5,850 m³ (82.4% complete)<br>
+          • <strong>Daily Earthwork Rate:</strong> +340 m³/shift (On schedule for Friday signoff)<br>
+          • <strong>Heavy Equipment Status:</strong> Excavator EX-320 (Active), Crane TC-01 (Active)<br>
+          • <strong>Worker Muster:</strong> 38/38 on-site workers accounted for.<br>
+          <em>BIM 4D Schedule Variance: +1.2 days ahead of schedule.</em>`
+        );
+      } else if (lower.includes("tool") || lower.includes("mcp") || lower.includes("list")) {
+        appendBotResponse(
+          "mcp::list_available_tools",
+          '{ protocolVersion: "2025-11-25", provider: "FastMCP" }',
+          `<strong>Active Industrial MCP Tools Connected:</strong><br>
+          1. <code>mcp::get_safety_compliance_feed()</code> — Multi-stream CCTV PPE audit<br>
+          2. <code>mcp::get_conveyor_telemetry()</code> — High-speed AOI defect inspection & PPM<br>
+          3. <code>mcp::query_construction_progress()</code> — 3D photogrammetry earthwork volume<br>
+          4. <code>mcp::trigger_emergency_siren()</code> — Hardware PLC strobe light relay<br>
+          5. <code>mcp::generate_osha_audit_report()</code> — Automated compliance PDF generation`
+        );
+      } else {
+        appendBotResponse(
+          "mcp::general_industrial_query",
+          `{ prompt: "${q.substring(0, 30)}..." }`,
+          `<strong>Industrial MCP Agent Response:</strong><br>
+          Processed request across connected factory subsystems. All telemetry nodes (CCTV edge cluster, conveyor Modbus bus, and site drone spatial mesh) are reporting normal status.<br>
+          <em>Would you like to run a specific safety check, conveyor defect query, or export an OSHA summary?</em>`
+        );
+      }
+    }, 450);
+  }
+
+  sendBtn.addEventListener("click", () => handleQuery(inputEl.value));
+  inputEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") handleQuery(inputEl.value);
+  });
+
+  chips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      const prompt = chip.dataset.prompt || chip.textContent.replace(/^[⚡💬\s]+/, "");
+      handleQuery(prompt);
+    });
+  });
+}
+
