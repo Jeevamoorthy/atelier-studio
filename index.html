@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATELIER // Senior Independent Studio & Freelance Collective</title>
+  <meta name="description" content="Senior freelance engineering and product design studio. Transparent scopes, modular options, and secure milestone escrow for high-growth startups and founders.">
+  
+  <!-- Human-Crafted Editorial Typography: Instrument Serif + Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Official Google Identity Services SDK -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Studio Status Bar -->
+  <aside class="status-bar" aria-label="Studio status">
+    <div class="status-bar-container">
+      <div class="status-indicator">
+        <span class="status-dot"></span>
+        <span class="status-text">Available for new client projects & sprints • Booking Q2–Q3</span>
+      </div>
+      <div class="status-meta">
+        <span>📍 San Francisco & Global Remote</span>
+        <span class="sep">•</span>
+        <span>Average turnaround: 14 business days</span>
+        <span class="sep">•</span>
+        <span class="badge-escrow">100% Escrow Protection</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Navigation Header -->
+  <header class="studio-header" id="header">
+    <div class="header-container">
+      <!-- Studio Branding -->
+      <a href="#hero" class="studio-brand">
+        <span class="brand-monogram">A/</span>
+        <div class="brand-details">
+          <span class="brand-title">Atelier Studio</span>
+          <span class="brand-subtitle">Independent Engineering & Design</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="#services" class="nav-item">Services & Options</a>
+        <a href="#project-estimator" class="nav-item">Scope & Pricing</a>
+        <a href="#portfolio" class="nav-item">Selected Work</a>
+        <a href="#process" class="nav-item">How It Works</a>
+        <a href="#faq" class="nav-item">FAQ</a>
+      </nav>
+
+      <!-- Client Actions & Google Auth -->
+      <div class="header-actions">
+        <!-- Theme Toggle (Pristine Light White / Studio Dark) -->
+        <button id="theme-toggle-btn" class="theme-toggle" title="Toggle Light / Dark Mode" aria-label="Toggle theme">
+          <span class="theme-icon">◐</span>
+        </button>
+
+        <!-- Guest State: Google Sign-in -->
+        <div id="guest-auth-box">
+          <button id="google-login-btn" class="btn-google-auth">
+            <svg class="google-icon" viewBox="0 0 24 24" width="16" height="16">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            <span>Sign in with Google</span>
+          </button>
+        </div>
+
+        <!-- Logged In State: Client Dashboard -->
+        <div id="user-auth-box" style="display: none;">
+          <button id="client-portal-btn" class="btn-client-portal">
+            <img id="user-avatar-img" src="" alt="Client Avatar" class="client-avatar">
+            <span class="portal-text">Client Portal</span>
+            <span id="active-projects-badge" class="badge-pill">1</span>
+          </button>
+        </div>
+
+        <!-- Primary Estimate CTA -->
+        <a href="#project-estimator" class="btn-primary-header">Estimate Project</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section: Pure Light White Aesthetic -->
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-rule"></span>
+          <span>Bespoke Engineering & Product Design Studio</span>
+        </div>
+
+        <h1 class="hero-heading">
+          Thoughtful design and robust code for <span class="hero-italic">ambitious founders.</span>
+        </h1>
+
+        <p class="hero-subhead">
+          We are a senior independent studio delivering high-performance web applications, product UI/UX design, and custom AI automations. Every engagement features fixed-price transparency, customizable options, and 100% milestone escrow protection.
+        </p>
+
+        <!-- Studio Credibility Bar -->
+        <div class="hero-meta-grid">
+          <div class="meta-item">
+            <span class="meta-figure">58+</span>
+            <span class="meta-label">Products Launched</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-figure">4.98 / 5</span>
+            <span class="meta-label">Client Rating Score</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-figure">100%</span>
+            <span class="meta-label">Milestone Escrow Backed</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-figure">0%</span>
+            <span class="meta-label">Surprise Fees or Scope Creep</span>
+          </div>
+        </div>
+
+        <!-- Hero Actions -->
+        <div class="hero-cta-bar">
+          <a href="#project-estimator" class="btn-cta-dark">
+            <span>Calculate Project Scope & Price</span>
+            <span class="arrow">→</span>
+          </a>
+          <a href="#services" class="btn-cta-subtle">
+            <span>Browse All 6 Freelance Services</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section with All Choosable Options -->
+    <section class="services-section" id="services">
+      <div class="section-container">
+        <div class="section-title-wrap">
+          <div class="section-tag">SERVICES & CAPABILITIES</div>
+          <h2 class="section-title">Everything you need to ship a <span class="italic">world-class product.</span></h2>
+          <p class="section-description">
+            Choose from modular freelance disciplines. Each offering provides explicit scope tiers, selectable tech stacks, delivery speeds, and optional production add-ons.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="services-filter-bar">
+          <div class="service-tabs" id="service-category-tabs">
+            <button class="service-tab active" data-cat="all">All Disciplines (6)</button>
+            <button class="service-tab" data-cat="development">Full-Stack Web</button>
+            <button class="service-tab" data-cat="design">Product & UI/UX</button>
+            <button class="service-tab" data-cat="ai">AI Automations</button>
+            <button class="service-tab" data-cat="mobile">Mobile Apps</button>
+            <button class="service-tab" data-cat="branding">Brand & Identity</button>
+            <button class="service-tab" data-cat="audit">Code & Security Audits</button>
+          </div>
+
+          <div class="services-search">
+            <input type="text" id="service-search-input" placeholder="Filter by keyword (e.g. Next.js, Figma, Chatbot)..." aria-label="Search services">
+          </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid" id="services-grid-cards">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Scope & Price Estimator (Interactive Human Configurator) -->
+    <section class="estimator-section" id="project-estimator">
+      <div class="section-container">
+        <div class="section-title-wrap">
+          <div class="section-tag">TRANSPARENT CLIENT PRICING</div>
+          <h2 class="section-title">Configure your project <span class="italic">scope & budget.</span></h2>
+          <p class="section-description">
+            Select your discipline, scope tier, delivery velocity, and optional add-ons. Receive an instant, guaranteed quote secured in escrow.
+          </p>
+        </div>
+
+        <div class="estimator-layout">
+          <!-- Configurator Form -->
+          <div class="estimator-form-card">
+            <form id="estimator-form" onsubmit="return false;">
+              <!-- Step 1: Discipline -->
+              <div class="cfg-step">
+                <div class="cfg-step-head">
+                  <span class="step-badge">1</span>
+                  <h3>Select Primary Discipline</h3>
+                </div>
+                <div class="cfg-options-grid" id="cfg-service-options">
+                  <label class="cfg-radio-card">
+                    <input type="radio" name="cfg_service" value="fullstack" data-base="3200" data-name="Full-Stack Web Application (Next.js & Supabase)" checked>
+                    <div class="cfg-card-body">
+                      <strong>Full-Stack Web App</strong>
+                      <span class="subtext">Next.js, TypeScript, PostgreSQL, Stripe</span>
+                      <span class="price-hint">From $3,200</span>
+                    </div>
+                  </label>
+
+                  <label class="cfg-radio-card">
+                    <input type="radio" name="cfg_service" value="uiux" data-base="2400" data-name="Product UI/UX & Interactive Design System">
+                    <div class="cfg-card-body">
+                      <strong>Product UI/UX Design</strong>
+                      <span class="subtext">Figma variables, prototypes, design systems</span>
+                      <span class="price-hint">From $2,400</span>
+                    </div>
+                  </label>
+
+                  <label class="cfg-radio-card">
+                    <input type="radio" name="cfg_service" value="ai_agent" data-base="2800" data-name="AI Integration & Custom Autonomous Workflows">
+                    <div class="cfg-card-body">
+                      <strong>AI Agent & Automations</strong>
+                      <span class="subtext">LLM APIs, RAG search, automated workflows</span>
+                      <span class="price-hint">From $2,800</span>
+                    </div>
+                  </label>
+
+                  <label class="cfg-radio-card">
+                    <input type="radio" name="cfg_service" value="mobile" data-base="3600" data-name="iOS & Android Mobile App (React Native)">
+                    <div class="cfg-card-body">
+                      <strong>Mobile Application</strong>
+                      <span class="subtext">React Native, Expo, App Store preparation</span>
+                      <span class="price-hint">From $3,600</span>
+                    </div>
+                  </label>
+
+                  <label class="cfg-radio-card">
+                    <input type="radio" name="cfg_service" value="branding" data-base="1800" data-name="Brand Identity & Design System Toolkit">
+                    <div class="cfg-card-body">
+                      <strong>Brand & Visual Identity</strong>
+                      <span class="subtext">Logomark, typography rules, brand guidelines</span>
+                      <span class="price-hint">From $1,800</span>
+                    </div>
+                  </label>
+
+                  <label class="cfg-radio-card">
+                    <input type="radio" name="cfg_service" value="audit" data-base="1600" data-name="Full Architecture, Performance & Code Audit">
+                    <div class="cfg-card-body">
+                      <strong>Code & Security Audit</strong>
+                      <span class="subtext">Architecture review, speed bottlenecks, OWASP</span>
+                      <span class="price-hint">From $1,600</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 2: Scope Tier -->
+              <div class="cfg-step">
+                <div class="cfg-step-head">
+                  <span class="step-badge">2</span>
+                  <h3>Select Scope Tier</h3>
+                </div>
+                <div class="tier-cards-row">
+                  <label class="tier-box">
+                    <input type="radio" name="cfg_tier" value="mvp" data-multiplier="1.0" data-days="10" checked>
+                    <div class="tier-box-body">
+                      <span class="tier-level">SPRINT BUILD</span>
+                      <h4>MVP / Core Version</h4>
+                      <p>Focused build with core user journeys, essential integrations, and 2 rounds of polish.</p>
+                      <div class="tier-footer">
+                        <span>⚡ 10 business days</span>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label class="tier-box recommended">
+                    <div class="badge-recommended">Most Popular</div>
+                    <input type="radio" name="cfg_tier" value="complete" data-multiplier="1.6" data-days="18">
+                    <div class="tier-box-body">
+                      <span class="tier-level">PRODUCTION COMPLETE</span>
+                      <h4>Full Scale Application</h4>
+                      <p>Complete edge-case coverage, automated test suite, administrative controls, and 30-day support.</p>
+                      <div class="tier-footer">
+                        <span>⚡ 18 business days</span>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label class="tier-box">
+                    <input type="radio" name="cfg_tier" value="enterprise" data-multiplier="2.4" data-days="28">
+                    <div class="tier-box-body">
+                      <span class="tier-level">FLAGSHIP SUITE</span>
+                      <h4>Enterprise Architecture</h4>
+                      <p>Multi-tenant infrastructure, SSO, high-throughput database optimization, and ongoing retainer SLA.</p>
+                      <div class="tier-footer">
+                        <span>⚡ 28 business days</span>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 3: Turnaround Velocity -->
+              <div class="cfg-step">
+                <div class="cfg-step-head">
+                  <span class="step-badge">3</span>
+                  <h3>Select Delivery Velocity</h3>
+                </div>
+                <div class="velocity-row">
+                  <label class="vel-card">
+                    <input type="radio" name="cfg_velocity" value="standard" data-fee="0" data-factor="1.0" checked>
+                    <div class="vel-body">
+                      <strong>Standard Studio Pace</strong>
+                      <span>Thorough sprint cadence with weekly recorded Loom updates</span>
+                      <span class="fee-tag">Included ($0)</span>
+                    </div>
+                  </label>
+
+                  <label class="vel-card">
+                    <input type="radio" name="cfg_velocity" value="priority" data-fee="600" data-factor="0.65">
+                    <div class="vel-body">
+                      <strong>⚡ Priority Fast-Track (35% Faster)</strong>
+                      <span>Dedicated single-focus development pipeline with daily async standups</span>
+                      <span class="fee-tag">+$600</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 4: Choosable Add-Ons -->
+              <div class="cfg-step">
+                <div class="cfg-step-head">
+                  <span class="step-badge">4</span>
+                  <h3>Select Production Add-Ons</h3>
+                </div>
+                <div class="addons-list">
+                  <label class="addon-item">
+                    <input type="checkbox" name="cfg_addon" value="warranty" data-price="400" checked>
+                    <div class="addon-text">
+                      <div class="addon-head">
+                        <strong>60-Day Post-Launch Bug Warranty</strong>
+                        <span class="addon-price">+$400</span>
+                      </div>
+                      <p>Contractual guarantee covering free hotfixes and dependency maintenance for 60 days.</p>
+                    </div>
+                  </label>
+
+                  <label class="addon-item">
+                    <input type="checkbox" name="cfg_addon" value="ip_transfer" data-price="250" checked>
+                    <div class="addon-text">
+                      <div class="addon-head">
+                        <strong>Mutual NDA & Perpetual IP Transfer Agreement</strong>
+                        <span class="addon-price">+$250</span>
+                      </div>
+                      <p>Standard legal assignment granting 100% intellectual property, code, and design ownership to client.</p>
+                    </div>
+                  </label>
+
+                  <label class="addon-item">
+                    <input type="checkbox" name="cfg_addon" value="e2e_tests" data-price="450">
+                    <div class="addon-text">
+                      <div class="addon-head">
+                        <strong>Automated Playwright E2E Test Suite</strong>
+                        <span class="addon-price">+$450</span>
+                      </div>
+                      <p>Comprehensive browser test automation and GitHub Actions CI/CD pipeline pre-configured.</p>
+                    </div>
+                  </label>
+
+                  <label class="addon-item">
+                    <input type="checkbox" name="cfg_addon" value="figma_library" data-price="350">
+                    <div class="addon-text">
+                      <div class="addon-head">
+                        <strong>Tokenized Figma UI Library with AutoLayout 5.0</strong>
+                        <span class="addon-price">+$350</span>
+                      </div>
+                      <p>Modular component library ready for design scale with color tokens and variables.</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 5: Brief Notes -->
+              <div class="cfg-step">
+                <div class="cfg-step-head">
+                  <span class="step-badge">5</span>
+                  <h3>Project Context & Requirements</h3>
+                </div>
+                <textarea id="client-notes-input" class="form-textarea" rows="3" placeholder="Tell us about your product, desired launch date, or link to your Figma / GitHub / Notion docs..."></textarea>
+              </div>
+            </form>
+          </div>
+
+          <!-- Sticky Quote Breakdown & Escrow Action -->
+          <div class="estimator-summary-col">
+            <div class="summary-sticky-card">
+              <div class="summary-card-header">
+                <span class="summary-caption">TRANSPARENT QUOTE</span>
+                <h3 class="summary-title">Scope Blueprint</h3>
+              </div>
+
+              <div class="summary-highlight-box">
+                <span class="highlight-label">CONFIGURED SERVICE</span>
+                <h4 id="quote-service-title" class="highlight-service">Full-Stack Web Application</h4>
+                <div class="highlight-tags">
+                  <span id="quote-tier-badge" class="tag-pill">MVP Build</span>
+                  <span id="quote-speed-badge" class="tag-pill">Standard Pace</span>
+                </div>
+              </div>
+
+              <div class="summary-line-items">
+                <div class="line-item">
+                  <span>Base Architecture</span>
+                  <span id="quote-base-cost">$3,200</span>
+                </div>
+                <div class="line-item">
+                  <span>Scope Complexity</span>
+                  <span id="quote-tier-cost">1.0x</span>
+                </div>
+                <div class="line-item">
+                  <span>Velocity Rush Fee</span>
+                  <span id="quote-velocity-cost">$0</span>
+                </div>
+                <div class="line-item">
+                  <span>Selected Add-ons (<span id="quote-addons-count">2</span>)</span>
+                  <span id="quote-addons-cost">+$650</span>
+                </div>
+                <div class="line-item discount-item">
+                  <span>Google Client Escrow Credit</span>
+                  <span class="discount-val">-$200</span>
+                </div>
+              </div>
+
+              <div class="summary-total-box">
+                <div class="total-row">
+                  <span class="total-label">Total Escrow Budget:</span>
+                  <span id="quote-total-price" class="total-val">$3,650</span>
+                </div>
+                <div class="eta-row">
+                  <span>Estimated Delivery:</span>
+                  <strong id="quote-delivery-eta">10 Business Days</strong>
+                </div>
+              </div>
+
+              <!-- Action Button -->
+              <button type="button" id="initiate-escrow-btn" class="btn-lock-escrow">
+                <span class="btn-main-text">Book Project & Fund Escrow</span>
+                <span class="btn-sub-text">Google Sign-In Required • Funds Released Only on Approval</span>
+              </button>
+
+              <div class="escrow-safeguards">
+                <div class="safeguard-item">
+                  <span class="safeguard-icon">🛡️</span>
+                  <span><strong>Zero Risk Escrow:</strong> Funds stay locked until you test and approve deliverables.</span>
+                </div>
+                <div class="safeguard-item">
+                  <span class="safeguard-icon">📄</span>
+                  <span><strong>Full IP Ownership:</strong> Complete code, designs, and credentials transferred upon completion.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work / Case Studies -->
+    <section class="portfolio-section" id="portfolio">
+      <div class="section-container">
+        <div class="section-title-wrap">
+          <div class="section-tag">SELECTED ENGAGEMENTS</div>
+          <h2 class="section-title">Case studies from <span class="italic">recent client sprints.</span></h2>
+          <p class="section-description">
+            Real products built and shipped for founders, venture-backed teams, and specialized platforms.
+          </p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card">
+            <div class="portfolio-header">
+              <span class="project-category">Full-Stack SaaS • AI Integration</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3 class="project-title">Synthetix // Automated Research Copilot</h3>
+            <p class="project-description">
+              Engineered an end-to-end RAG platform with hybrid vector search, interactive citations, multi-tenant billing, and sub-150ms streaming responses.
+            </p>
+            <div class="project-meta">
+              <span>Stack: Next.js 15, PostgreSQL, Pinecone, FastAPI</span>
+              <span class="meta-highlight">Delivered in 16 days</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-header">
+              <span class="project-category">Product Design & Mobile</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3 class="project-title">Verve // Cross-Border B2B Treasury App</h3>
+            <p class="project-description">
+              Crafted the entire design system in Figma with 80+ components and developed a React Native mobile application for enterprise treasury tracking.
+            </p>
+            <div class="project-meta">
+              <span>Stack: Figma Variables, React Native, TypeScript</span>
+              <span class="meta-highlight">Approved on 1st Milestone</span>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <div class="portfolio-header">
+              <span class="project-category">Web Platform & Branding</span>
+              <span class="project-year">2025</span>
+            </div>
+            <h3 class="project-title">Alabaster // Architectural Hardware Brand</h3>
+            <p class="project-description">
+              Designed a minimalist e-commerce storefront with 3D product visualizer, custom headless Shopify integration, and editorial typography.
+            </p>
+            <div class="project-meta">
+              <span>Stack: Next.js, Shopify Storefront API, Three.js</span>
+              <span class="meta-highlight">34% Conversion Uplift</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (The Escrow Method) -->
+    <section class="process-section" id="process">
+      <div class="section-container">
+        <div class="section-title-wrap">
+          <div class="section-tag">COLLABORATION ARCHITECTURE</div>
+          <h2 class="section-title">How professional freelance <span class="italic">actually works.</span></h2>
+          <p class="section-description">
+            No endless hourly billing surprises or ghosting. We work in disciplined, milestoned sprints with escrow guarantees.
+          </p>
+        </div>
+
+        <div class="process-steps-grid">
+          <div class="process-step">
+            <span class="step-counter">01</span>
+            <h4>Scope & Milestone Agreement</h4>
+            <p>We define exact deliverables, staging deadlines, and fixed pricing. Both parties sign a mutual IP transfer and NDA.</p>
+          </div>
+
+          <div class="process-step">
+            <span class="step-counter">02</span>
+            <h4>50% Milestone Escrow Lock</h4>
+            <p>You deposit funds into a secure third-party escrow. Money is held safely and cannot be withdrawn until you approve each build phase.</p>
+          </div>
+
+          <div class="process-step">
+            <span class="step-counter">03</span>
+            <h4>Weekly Staging & Async Reviews</h4>
+            <p>Receive access to live private preview deployments, Loom walkthrough videos, and dedicated Slack/WhatsApp channels.</p>
+          </div>
+
+          <div class="process-step">
+            <span class="step-counter">04</span>
+            <h4>Sign-off & 100% IP Transfer</h4>
+            <p>You test the final deliverable. Once fully approved, escrow is released, code repositories are transferred, and your 60-day warranty starts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="section-container">
+        <div class="section-title-wrap text-center">
+          <div class="section-tag">COMMON QUESTIONS</div>
+          <h2 class="section-title">Clear answers for <span class="italic">serious clients.</span></h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-card">
+            <button class="faq-q-btn" aria-expanded="false">
+              <span>Why is Google Sign-In required to book a project?</span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-a-content">
+              <p>Google authentication links your verified client identity to our escrow ledger, prevents automated spam, unlocks a $200 onboarding credit on your first project, and gives you access to the private Client Portal for tracking deliverables.</p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-q-btn" aria-expanded="false">
+              <span>Do I own the full copyright, source code, and design files?</span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-a-content">
+              <p>Yes. 100% ownership transfers immediately to your company upon final milestone approval. We provide clean GitHub repository ownership, Figma team access, and all production credentials.</p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-q-btn" aria-expanded="false">
+              <span>What happens if I need changes or discover a bug?</span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-a-content">
+              <p>Every tier includes dedicated revision rounds. Additionally, our 60-day post-launch warranty covers any bug or defect fixes within 24 hours at zero extra charge.</p>
+            </div>
+          </div>
+
+          <div class="faq-card">
+            <button class="faq-q-btn" aria-expanded="false">
+              <span>Can we customize the tech stack or use our existing codebase?</span>
+              <span class="faq-toggle">+</span>
+            </button>
+            <div class="faq-a-content">
+              <p>Absolutely. We frequently integrate into existing repositories, design systems, and cloud providers (AWS, GCP, Supabase, Vercel). You can specify your preferred stack in the brief notes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Studio Footer -->
+  <footer class="studio-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="brand-monogram">A/</span>
+          <span class="footer-brand-name">Atelier Studio Collective</span>
+        </div>
+        <p class="footer-bio">
+          Independent digital product studio pairing senior software engineering with editorial design. Built for founders who value speed, craftsmanship, and accountability.
+        </p>
+        <p class="footer-copy">© 2026 Atelier Studio Inc. All rights reserved.</p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-nav-col">
+          <span class="col-heading">Disciplines</span>
+          <a href="#services">Full-Stack Web</a>
+          <a href="#services">Product UI/UX</a>
+          <a href="#services">AI & Automations</a>
+          <a href="#services">Mobile Apps</a>
+          <a href="#services">Brand Identity</a>
+        </div>
+
+        <div class="footer-nav-col">
+          <span class="col-heading">Client Hub</span>
+          <a href="#project-estimator">Scope Estimator</a>
+          <a href="#process">Escrow Protocol</a>
+          <a href="#portfolio">Selected Work</a>
+          <a href="#" id="footer-login-btn">Google Client Login</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MODALS & DRAWERS ================= -->
+
+  <!-- Real Google Identity Services Authentication Modal -->
+  <div id="google-auth-modal" class="modal-overlay" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modal-google-title">
+    <div class="google-login-dialog">
+      <button class="dialog-close-btn" id="close-google-modal-btn" aria-label="Close dialog">✕</button>
+
+      <div class="google-dialog-header">
+        <svg class="google-g-logo" viewBox="0 0 24 24" width="32" height="32">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+        </svg>
+        <h3 id="modal-google-title">Sign in with Google</h3>
+        <p class="google-dialog-subtitle">Authenticate via official Google Identity Services to access client escrow</p>
+      </div>
+
+      <!-- Real Official Google Sign-In Button Target Container -->
+      <div id="google-official-btn-wrap" class="google-official-wrap">
+        <div id="g_id_signin_element"></div>
+      </div>
+
+      <div class="dialog-separator">
+        <span>or choose verified client account</span>
+      </div>
+
+      <!-- Quick Verified Client Profiles (Connected directly to backend DB) -->
+      <div class="google-accounts-picker">
+        <button class="account-card" data-name="Sarah Jenkins" data-email="sarah.jenkins@lumina-health.io" data-avatar="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces" class="acc-img" alt="Sarah Jenkins">
+          <div class="acc-info">
+            <span class="acc-name">Sarah Jenkins</span>
+            <span class="acc-email">sarah.jenkins@lumina-health.io</span>
+          </div>
+          <span class="acc-badge">VP of Product</span>
+        </button>
+
+        <button class="account-card" data-name="David Kim" data-email="david.kim@synthetix-capital.com" data-avatar="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces" class="acc-img" alt="David Kim">
+          <div class="acc-info">
+            <span class="acc-name">David Kim</span>
+            <span class="acc-email">david.kim@synthetix-capital.com</span>
+          </div>
+          <span class="acc-badge">Co-Founder</span>
+        </button>
+      </div>
+
+      <div class="dialog-separator">
+        <span>or sign in with custom Google ID</span>
+      </div>
+
+      <form id="custom-google-form" class="custom-email-box">
+        <input type="email" id="custom-google-email" placeholder="your.name@company.com" required>
+        <button type="submit" class="btn-email-submit">Continue →</button>
+      </form>
+
+      <!-- Google Client ID Configuration Accordion -->
+      <details class="client-id-config-details">
+        <summary>⚙️ Google Cloud Client ID Settings</summary>
+        <div class="config-inner">
+          <label for="custom-client-id-input">Google OAuth Client ID:</label>
+          <input type="text" id="custom-client-id-input" placeholder="e.g. 123456789-abcdefg.apps.googleusercontent.com">
+          <button type="button" id="save-client-id-btn" class="btn-save-cfg">Save Client ID</button>
+        </div>
+      </details>
+
+      <div class="google-footer-notice">
+        <p>Google verifies your identity for project escrow disbursements and contract generation. Authenticated via backend API.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Client Portal & Active Projects Drawer -->
+  <div id="client-portal-drawer" class="drawer-overlay" style="display: none;">
+    <div class="portal-drawer-panel">
+      <div class="drawer-top-bar">
+        <div class="drawer-brand-head">
+          <span class="brand-monogram">A/</span>
+          <div>
+            <h3>Client Escrow Portal</h3>
+            <p>Milestone progress, deliverable links & approval release</p>
+          </div>
+        </div>
+        <button id="close-portal-drawer-btn" class="dialog-close-btn">✕</button>
+      </div>
+
+      <!-- Live Client Info Strip -->
+      <div class="client-session-bar" id="portal-session-info">
+        <img id="portal-user-avatar" src="" alt="Avatar" class="portal-user-img">
+        <div class="portal-user-meta">
+          <strong id="portal-user-name">Client Name</strong>
+          <span id="portal-user-email">email@domain.com</span>
+        </div>
+        <button id="portal-logout-btn" class="btn-portal-logout" title="Sign Out">Sign Out</button>
+      </div>
+
+      <div class="drawer-body" id="portal-projects-list">
+        <!-- Rendered dynamically from /api/orders -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Service Details & Scope Options Modal -->
+  <div id="service-modal-overlay" class="modal-overlay" style="display: none;">
+    <div class="service-modal-box">
+      <button id="close-service-modal-btn" class="dialog-close-btn">✕</button>
+      <div id="service-modal-inner">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Stack -->
+  <div id="toast-container" class="toast-stack"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

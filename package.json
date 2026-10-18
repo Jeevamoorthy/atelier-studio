@@ -1,0 +1,17 @@
+{
+  "name": "atelier-freelance-studio",
+  "version": "1.0.0",
+  "description": "Bespoke Independent Freelance Studio & Escrow Platform with Real Google Authentication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "node -e 'console.log(\"Vercel build complete\")'"
+  },
+  "keywords": ["freelancing", "escrow", "google-oauth", "studio"],
+  "author": "Atelier Studio",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

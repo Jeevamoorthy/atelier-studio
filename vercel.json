@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/api/auth/google",
+      "destination": "/api/auth/google.js"
+    },
+    {
+      "source": "/api/orders",
+      "destination": "/api/orders.js"
+    }
+  ]
+}

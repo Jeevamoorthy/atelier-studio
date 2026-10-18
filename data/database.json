@@ -1,0 +1,113 @@
+{
+  "users": [
+    {
+      "id": "usr_google_default",
+      "google_id": "google_1082914812301928",
+      "email": "sarah.jenkins@lumina-health.io",
+      "name": "Sarah Jenkins",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=faces",
+      "credits": 200,
+      "role": "client",
+      "created_at": "2026-10-18T05:24:30.101Z"
+    },
+    {
+      "id": "usr_1792301099500_pborq",
+      "google_id": "google_user",
+      "email": "founder@startup.io",
+      "name": "Alex Founder",
+      "avatar": "https://example.com/avatar.png",
+      "credits": 200,
+      "role": "client",
+      "created_at": "2026-10-18T05:24:59.500Z",
+      "last_login": "2026-10-18T05:24:59.501Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ATL-2161",
+      "user_email": "founder@startup.io",
+      "service_name": "Full-Stack Web App",
+      "tier": "MVP Sprint",
+      "budget": 3450,
+      "status": "Initiated • Milestone 1 Escrow Locked",
+      "progress": 10,
+      "eta": "10 business days",
+      "milestones": [
+        {
+          "name": "Phase 1: Architecture & Technical Discovery",
+          "done": false
+        },
+        {
+          "name": "Phase 2: Core Engineering & Staging Build",
+          "done": false
+        },
+        {
+          "name": "Phase 3: QA Sign-off & IP Repository Transfer",
+          "done": false
+        }
+      ],
+      "notes": "Standard client brief specifications.",
+      "created_at": "2026-10-18T05:24:59.502Z"
+    },
+    {
+      "id": "ATL-8921",
+      "user_email": "sarah.jenkins@lumina-health.io",
+      "service_name": "Full-Stack Web Application (Next.js)",
+      "tier": "MVP Sprint",
+      "budget": 3650,
+      "status": "Milestone 2 in Progress (65%)",
+      "progress": 65,
+      "eta": "4 business days",
+      "milestones": [
+        {
+          "name": "Phase 1: Architecture & Database Schema",
+          "done": true,
+          "approved_at": "2026-10-14"
+        },
+        {
+          "name": "Phase 2: Authentication & Core Dashboard",
+          "done": false,
+          "in_progress": true
+        },
+        {
+          "name": "Phase 3: Stripe Billing & QA Handover",
+          "done": false
+        }
+      ],
+      "notes": "Production dashboard with team invites and PostgreSQL setup.",
+      "created_at": "2026-10-12T10:00:00.000Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "fullstack",
+      "name": "Full-Stack Web Application",
+      "base_price": 3200
+    },
+    {
+      "id": "uiux",
+      "name": "Product UI/UX & Design System",
+      "base_price": 2400
+    },
+    {
+      "id": "ai_agent",
+      "name": "AI Integration & Autonomous Workflows",
+      "base_price": 2800
+    },
+    {
+      "id": "mobile",
+      "name": "Cross-Platform Mobile Application",
+      "base_price": 3600
+    },
+    {
+      "id": "branding",
+      "name": "Brand Identity & Visual System",
+      "base_price": 1800
+    },
+    {
+      "id": "audit",
+      "name": "Code Architecture & Security Audit",
+      "base_price": 1600
+    }
+  ]
+}
