@@ -2,7 +2,6 @@
   "name": "atelier-freelance-studio",
   "version": "1.0.0",
   "description": "Bespoke Independent Freelance Studio & Escrow Platform with Real Google Authentication",
-  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
