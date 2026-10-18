@@ -12,7 +12,7 @@ const googleAuthHandler = require('./api/auth/google');
 const ordersHandler = require('./api/orders');
 
 const PORT = process.env.PORT || 8080;
-const PUBLIC_DIR = __dirname;
+const PUBLIC_DIR = path.join(__dirname, 'public');
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
